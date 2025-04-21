@@ -4,11 +4,24 @@
 package org.example;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+
 
     public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+        String originalText = "hello world";
+        System.out.println("Original text: " + originalText);
+
+        // Compression
+        CompressedResult result = HuffmanCoding.compress(originalText);
+        System.out.println("\nCompression results:");
+        System.out.println("Frequency table: " + result.frequencyTable);
+        System.out.println("Code table: " + result.codeTable);
+        System.out.println("Compressed bits: " + result.compressedBits);
+
+        // Decompression
+        String decompressedText = HuffmanCoding.decompress(result.compressedBits, result.frequencyTable);
+        System.out.println("\nDecompressed text: " + decompressedText);
+
+        // Verification
+        System.out.println("\nVerification: " + originalText.equals(decompressedText));
     }
 }
