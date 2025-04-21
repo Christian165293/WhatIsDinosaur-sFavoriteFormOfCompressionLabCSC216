@@ -1,6 +1,6 @@
 package org.example;
 
-public class Node implements Comparable<Node>{
+public class Node implements Comparable<Node> {
     Character character;
     int frequency;
     Node left;

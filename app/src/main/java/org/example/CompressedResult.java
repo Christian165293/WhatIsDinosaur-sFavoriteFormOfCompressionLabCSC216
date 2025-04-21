@@ -8,8 +8,8 @@ public class CompressedResult {
     public String compressedBits;
 
     public CompressedResult(Map<Character, Integer> frequencyTable,
-                             Map<Character, String> codeTable,
-                             String compressedBits) {
+                            Map<Character, String> codeTable,
+                            String compressedBits) {
         this.frequencyTable = frequencyTable;
         this.codeTable = codeTable;
         this.compressedBits = compressedBits;
